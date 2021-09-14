@@ -1,0 +1,16 @@
+<app-add-item (onAddItem)="addItem($event)"></app-add-item>
+<app-todo-item *ngFor="let task1 of tasks" [task]="task1" (onDeleteTask)="delete($event)" (onEditTodo)="editTodo($event, template)"></app-todo-item>
+<ng-template #template>
+    <div class="container-edit">
+        <fa-icon
+        (click)="modalRef.hide()"
+                [ngStyle]="{ color: 'red' }"
+                [icon]="faTimes"
+          ></fa-icon>
+          <form (ngSubmit)="onSubmit()">
+          <label for="text"><h3>Editing: {{toEdit.text}}</h3></label>
+          <input type="text" name="text" id="text" placeholder="Edit Here" [(ngModel)] = "edittext"/>
+          <input type="submit" value="Edit Item" class="btn btn-block"/>
+        </form>
+    </div>
+</ng-template>

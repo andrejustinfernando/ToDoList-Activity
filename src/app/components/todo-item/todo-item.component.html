@@ -1,0 +1,11 @@
+  <div class="task" (dblclick)="editTodo(task)">
+<h3>
+  {{ task.text }} 
+  <fa-icon
+      (click)="delete(task)"
+      [ngStyle]="{ color: 'red' }"
+      [icon]="faTimes"
+></fa-icon>
+</h3>
+<p>{{ task.day }}</p>
+</div>

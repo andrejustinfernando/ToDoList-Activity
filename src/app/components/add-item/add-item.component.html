@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="text">Add Item</label>
+        <input type="text" name="text" id="text" placeholder="Add Item" [(ngModel)] = "text"/>
+        <input type="submit" value="Add to List" class="btn btn-block"/>
+    </div>
+</form>
