@@ -15,10 +15,11 @@ export class TodoItemComponent implements OnInit {
   constructor() {}
   ngOnInit(): void {}
 
+  //To emit the event of clicking to the parent todo component
   delete(item: any) {
     this.onDeleteTask.emit(item);
   }
-
+  //To emit the event of clicking to the parent todo component
   editTodo(item: any) {
     this.onEditTodo.emit(item);
   }

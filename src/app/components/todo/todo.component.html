@@ -1,5 +1,8 @@
+
 <app-add-item (onAddItem)="addItem($event)"></app-add-item>
 <app-todo-item *ngFor="let task1 of tasks" [task]="task1" (onDeleteTask)="delete($event)" (onEditTodo)="editTodo($event, template)"></app-todo-item>
+
+
 <ng-template #template>
     <div class="container-edit">
         <fa-icon
